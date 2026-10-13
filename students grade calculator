@@ -1,0 +1,46 @@
+import java.util.Scanner;
+
+public class StudentGradeCalculator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Read the student's name
+        System.out.print("Enter the student's name: ");
+        String name = scanner.nextLine();
+
+        // Read three grades
+        System.out.print("Enter grade 1: ");
+        double grade1 = scanner.nextDouble();
+
+        System.out.print("Enter grade 2: ");
+        double grade2 = scanner.nextDouble();
+
+        System.out.print("Enter grade 3: ");
+        double grade3 = scanner.nextDouble();
+
+        // Calculate the average grade
+        double average = (grade1 + grade2 + grade3) / 3;
+
+        // Determine the letter grade
+        char letterGrade;
+
+        if (average >= 90) {
+            letterGrade = 'A';
+        } else if (average >= 80) {
+            letterGrade = 'B';
+        } else if (average >= 70) {
+            letterGrade = 'C';
+        } else if (average >= 60) {
+            letterGrade = 'D';
+        } else {
+            letterGrade = 'F';
+        }
+
+        // Display the result
+        System.out.println("\nStudent Name: " + name);
+        System.out.printf("Average Grade: %.2f%n", average);
+        System.out.println("Letter Grade: " + letterGrade);
+
+        scanner.close();
+    }
+}
