@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class GradeClassification {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the student's grade: ");
+        double grade = scanner.nextDouble();
+        String performance;
+
+        if (grade < 0 || grade > 100) {
+            performance = "Invalid Grade";
+        } else if (grade >= 90) {
+            performance = "Excellent";
+        } else if (grade >= 85) {
+            performance = "Very Good";
+        } else if (grade >= 80) {
+            performance = "Good";
+        } else if (grade >= 75) {
+            performance = "Passed";
+        } else {
+            performance = "Failed";
+        }
+
+        System.out.println(performance);
+        scanner.close();
+    }
+}
